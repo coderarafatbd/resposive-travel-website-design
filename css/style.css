@@ -3,135 +3,149 @@
 *{
   margin: 0;
   padding: 0;
+  box-sizing: border-box;
   font-family: 'Mulish', sans-serif;
-  max-width:1920px;
-  /* min-width: 600; */
-  background: #fff;
 }
 
-nav{
+.navbar {
   display: flex;
-  justify-content:space-between;
   align-items: center;
-  max-width: 1440px;
-  margin-top: 50px;
-  margin-left: 240px;
-  /* background: #FF5400; */
-  /* min-width: 600px; */
+  justify-content: space-between;
+  padding: 10px 20px;
+  background-color: #fff;
 }
-nav .logo {
-  display: flex;
-}
+
 .logo{
-  width: 48px;
-  height:48px;
-  gap: 16px;
-  margin-left: 10px;
-}
-.logo-title {
-  width:300px;
-  height: 45px;
-  display: flex;
   color: #131318;
+  font-family: Mulish;
   font-size: 36px;
+  font-style: normal;
   font-weight: 800;
+  line-height: normal;
 }
 
-.logo-title span{
+.logo span{
   color: #FF5400;
+  font-family: Mulish;
   font-size: 36px;
+  font-style: normal;
   font-weight: 800;
+  line-height: normal;
 }
-
-nav > ul{
-  list-style: none;
-  display: flex;
-  gap: 44px;
-  text-decoration: none;
-  
+.navbar .logo img {
+  width: 48px;
+  height: 40px; /* Adjust size as needed */
 }
-
-nav > ul li{
-  color: #424247;
-  text-align: center;
-  font-size: 20px;
-  font-weight: 400;
-  }
 
 nav > ul li span{
   color: #FF5400;
   text-align: center;
-  font-size: 20px;
-  font-weight: 700;
-}
-
-#banner{
-  width: 1170px;
-  height: 500px;
-  margin-top: 50px;
-  margin-left: 375px;
-  border-radius: 16px;
-  background-image: linear-gradient(180deg, rgba(19, 19, 24, 0.80) 0%, rgba(19, 19, 24, 0.00) 100%),url(../Images/banner.png);
-  /* background:cover no-repeat; */
-
-  ;
-}
-
-.banner-container{
-  width: 880px;
-  height: 300px;
-  /* align-items: center; */
-  /* background-color:transparent; */
-  /* padding: 106px 185px; */
-  justify-content: space-between;
-  align-items: center;
-  padding-top: 100px;
-  padding-left:150px;
-  background: none;
-}
-
-.banner-heading{
-  width: 596px;
-  height: 80px;
-  margin-left: 160px;
-  background: none;
-  color: #FFF;
   font-family: Mulish;
-  font-size: 64px;
-  font-weight: 800;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
 }
-.banner-description{
-  width: 676px;
-  height: 52px;
-  margin-left:120px;
-  background:none;
-  color: #FFF;
-  font-size: 16px;
-  font-weight: 400;
-  text-align: center;
-  margin-top: 24px;
+.nav-links {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
 }
-.banner-form{
-  width: 768px;
-  height: 52px;
+
+/* .nav-links li a {
+  text-decoration: none;
+  padding: 10px;
+  display: block;
+} */
+
+.nav-links li:not(:last-child) {
+  margin-right: 16px; /* Adjust spacing as needed */
+}
+
+/* Styles for Hamburger menu - initially hidden */
+.hamburger {
+  display: none;
+  cursor: pointer;
+}
+
+.hamburger span {
+  display: block;
+  width: 25px; /* Adjust width as needed */
+  height: 3px; /* Adjust height as needed */
+  margin-bottom: 5px;
+  background-color: #333;
+}
+
+
+/*  hamburger and responsive navbar */
+@media (max-width: 900px) {
+  /*  larger mobile devices and tablets */
+}
+
+@media (max-width: 600px) {
+  /* Hamburger Menu */
+  .hamburger {
+      display: block;
+  }
+
+  .nav-links {
+      position: absolute;
+      right: -100%; 
+      top: 60px; 
+      flex-direction: column;
+      background-color: #fff;
+      width: 100%;
+      text-align: center;
+      transition: right 0.3s;
+  }
+
+  .nav-links.active {
+      right: 0;
+  }
+
+  .nav-links li {
+      padding: 15px 0;
+  }
+}
+
+/* Add your respective styles for devices with width of 900px and above here */
+@media (min-width: 900px) {
+  /* Adjustments for larger screens */
+}
+
+.banner{
+  background-image: linear-gradient(180deg, rgba(19, 19, 24, 0.80) 0%, rgba(19, 19, 24, 0.00) 100%), url(../Images/banner.png);
+  background-size: cover;
+  background-position: center;
+  max-width: 1170px;
+  /* height: 500px; */
+  padding: 0 20px;
+  margin: 0 auto;
+  
+}
+
+.search-container{
   display: inline-flex;
+  /* max-width: 800px; */
+  gap: 40px;
   padding: 16px;
-  align-items: flex-start;
-  gap: 24px;
+  /* align-items: flex-start; */
+  margin-top: 20px;
+  margin-left: 85px;
   border-radius: 8px;
-   background: rgba(255, 255, 255, 0.30);
-   margin-left: 50px;
-   margin-top: 50px;
+  background: rgba(255, 255, 255, 0.30);
 }
 
 .where-go{
   width: 174px;
   height: 52px;
+  background: #FFF;
   border-radius: 8px;
   border: none;
-  background: #FFF;
   color: rgba(19, 19, 24, 0.50);
-  text-align:center;
+  text-align: center;
+  font-family: Mulish;
   font-size: 16px;
   font-weight: 400;
 }
@@ -139,39 +153,167 @@ nav > ul li span{
 .when{
   width: 174px;
   height: 52px;
-  border-radius: 8px;
   background: #FFF;
+  border-radius: 8px;
+  border: none;
   color: rgba(19, 19, 24, 0.50);
+  text-align: center;
+  font-family: Mulish;
   font-size: 16px;
   font-weight: 400;
-  border: none;
-  /* text-align: center; */
-  padding: 10px;
 }
 .select-type{
   width: 174px;
   height: 52px;
-  border-radius: 8px;
   background: #FFF;
-  font-size: 16px;
-  font-weight: 400;
-  font-family: Mulish;
+  border-radius: 8px;
   border: none;
   color: rgba(19, 19, 24, 0.50);
-  padding: 10px;
+  text-align: center;
+  font-family: Mulish;
+  font-size: 16px;
+  font-weight: 400;
 }
 .search-btn{
   width: 174px;
   height: 52px;
+  background:#FF5400;
   border-radius: 8px;
-  background: #FF5400;
-  color: #FFF;
+  border: none;
+  color: #fff;
   text-align: center;
   font-family: Mulish;
-  border: none;
   font-size: 16px;
   font-weight: 700;
 }
-.search-btn > i{
-  background: none;
+
+.banner-heading{
+  color: #FFF;
+  font-family: Mulish;
+  font-size: 64px;
+  font-style: normal;
+  font-weight: 800;
+  padding-top: 70px;
+  padding-left: 250px;
+}
+.banner-description{
+  
+  padding-top: 24px;
+  color: #FFF;
+  text-align: center;
+  font-family: Mulish;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  padding-left: 100px;
+  padding-right: 100px;
+  text-align: center;
+}
+
+
+/* Responsive styles */
+@media only screen and (min-width: 600px) {
+  .search-container {
+      flex-direction: row;
+      justify-content: space-between;
+  }
+
+  .where-go, .when, .select-type, .search-btn {
+      flex: 1;
+      margin: 0 10px;
+  }
+
+  .search-btn {
+      flex: none; /* Do not grow or shrink */
+  }
+}
+
+@media only screen and (min-width: 900px) {
+  .banner-heading {
+      font-size: 3em; /* Larger text for large screens */
+  }
+
+  .banner-description {
+      font-size: 1.5em; /* Larger text for large screens */
+  }
+}
+
+
+.container{
+  max-width: 1200px;
+  margin: 50px auto;
+  padding: 0 20px;
+}
+.tour-item {
+  display: flex;
+  justify-content: space-between;
+  gap: 30px;
+}
+.tour-content, .tour-image {
+  flex: 1;
+}
+
+.tour-content h2{
+  color: #131318;
+text-align: center;
+font-family: Mulish;
+font-size: 40px;
+font-style: normal;
+font-weight: 800;
+line-height: normal;
+
+}
+.tour-content p{
+  color: rgba(19, 19, 24, 0.70);
+  padding-top: 24px;
+font-family: Mulish;
+font-size: 16px;
+font-style: normal;
+font-weight: 400;
+/* line-height: 26px; 162.5% */
+}
+
+.tour-content > ul li{
+  color: rgba(19, 19, 24, 0.70);
+padding: 10px auto;
+font-family: Mulish;
+font-size: 16px;
+font-style: normal;
+font-weight: 400;
+line-height: 26px; 
+}
+
+.btn{
+  width: 174px;
+height: 52px;
+margin-top: 40px;
+border: none;
+flex-shrink: 0;
+border-radius: 8px;
+background: #FF5400;
+color: #FFF;
+text-align: center;
+font-family: Mulish;
+font-size: 20px;
+font-style: normal;
+font-weight: 800;
+line-height: normal;
+
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .tour-item {
+    flex-direction: column;
+    align-items: center;
+  }
+  .tour-content, .tour-image {
+    flex: none;
+    width: 100%;
+    text-align: center;
+  }
+  .tour-content {
+    margin-bottom: 20px;
+  }
+  /* Adjust button size, spacing, font size if necessary */
 }

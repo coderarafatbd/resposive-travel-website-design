@@ -7,15 +7,81 @@
   <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
+
   <header>
-    <header>
-      <nav>
+    <nav id="navbar" class="navbar">
+      <div class="logo">
+          <!-- Assuming logo is in image format -->
+          <img src="images/Group 40071 (2).png" alt="Logo">Salman <span>Travels</span>
+      </div>
+      <button class="hamburger" id="hamburger">
+          <!-- Hamburger Icon -->
+          <span></span>
+          <span></span>
+          <span></span>
+      </button>
+      <ul class="nav-links" id="nav-links">
+          <li><span>Home</span></li>
+          <li>About</li>
+          <li>Packages</li>
+          <li>Blog</li>
+          <li>contact</li>
+      </ul>
+  </nav>
+
+  <div class="banner">
+    <h1 class="banner-heading">
+      Explore Your Travel
+    </h1>
+    <p class="banner-description">
+      "Embark on a World of Wonders with Explore Your Travel. Uncover hidden treasures, traverse diverse landscapes, and immerse yourself in unique cultures. Your passport to extraordinary adventures is here </p>
+      <div class="search-container">
+        <input type="text" placeholder="Where go" class="where-go">
+        <select class="when">
+          <option selected>When</option>
+        </select>
+        <select class="select-type">
+          <option selected>Select Type</option>
+        </select>
+        <button class="search-btn">
+          <i class="fas fa-search"></i>
+          Find Now
+      </button>
+      </div>
+    </div>
+    
+  </header>
+
+
+
+  <main>
+    <section class="container">
+      <div class="tour-item">
+        <div class="tour-content">
+          <h2>Our Popular Tours</h2>
+          <p>Explore palm-fringed beaches, crystal-clear waters, and vibrant local culture in our tropical getaway. Your perfect beach retreat awaits!</p>
+          <ul>
+            <li>Immerse yourself in the enchanting beauty of Europe. From historic cities to picturesque countryside, experience the best of Europe's rich heritage and diverse landscapes.</li>
+            <li>Delight in the vibrant traditions and modern wonders of Asia. From ancient temples to bustling markets, this tour offers a captivating blend of history and contemporary allure.</li>
+            <li>Indulge in the energy of cosmopolitan cities. From iconic landmarks to local hotspots, experience the excitement of urban life on this dynamic city tour.</li>
+          </ul>
+          <p>These are just a few examples, and the tours can be tailored to meet the preferences and interests of the travelers. Adventure Horizons Travel aims to create unforgettable experiences, blending adventure, culture, and natural beauty in every journey.
+          </p>
+          <button class="btn">Read More</button>
+        </div>
+        <div class="tour-img">
+          <img src="images/Rectangle 4.png" alt="Tour-img">
+        </div>
+      </div>
+    </section>
+  </main>
+  <!-- <header>
+          <nav>
         <div class="logo">
-          <img src="images/Group 40071 (2).png" alt="Logo">
+          
           <h1 class="logo-title">Salman <span>Travels</span></h1>
         </div>
-        <!-- <img src="images/Group 40071 (2).png" alt="" class="logo">
-        <h3 class="logo-title">G3 Architects</h3> -->
+       
         <ul>
           <li> <span>Home</span></li>
           <li>Packages</li>
@@ -45,16 +111,85 @@
             </div>
           </div>
   </header>
-      
-  <main>
+       -->
 
-  </main>
+       <!-- <header class="hero-section">
+        <nav class="navbar">
+            <div class="logo">Hero Travel</div>
+            <ul class="nav-links">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#packages">Packages</a></li>
+                <li><a href="#testimonial">Testimonial</a></li>
+             
+            </ul>
+           
+        </nav>
+        <div class="hero-content">
+            <h1>Explore Your Travel</h1>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+            <div class="search-area">
+                <input type="text" placeholder="Where to go">
+                <select>
+                    <option value="" disabled selected>Select Time</option>
+                    <option value="time1">Time Slot 1</option>
+                    
+                </select>
+                <button>Find Now</button>
+            </div>
+        </div>
+    </header>
+  <main>
+    <section class="tours-section">
+      <div class="tours-info">
+        <h2>Our Popular Tours</h2>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis venenatis porta posuere.</p>
+        <ul>
+          <li>Nullam odio ipsum, mollis auctor est in, ultrices porta magna.</li>
+          <li>A adipiscing enim ac malesuada vestibulum tortor vitae, ultrices porta magna.</li>
+          <li>Curabitur lectus sapien, tincidunt id libero in, venenatis fringilla libero.</li>
+        </ul>
+        <a href="#" class="btn">Read More</a>
+      </div>
+      <div class="tours-image">
+        <img src="images/Rectangle 4.png" alt="Mountain Landscape">
+      </div>
+    </section>
+    
+    -->
+      
+    
+
+
+  
 
   <footer>
 
   </footer>
-  
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <script>
+    document.getElementById('hamburger').addEventListener('click', function () {
+        document.getElementById('nav-links').classList.toggle('active');
+    });
+</script>
   <script src="https://kit.fontawesome.com/c35fc19c0d.js" crossorigin="anonymous"></script>
-</body>
+  </body>
 </html>
